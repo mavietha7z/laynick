@@ -221,7 +221,6 @@ const controlPlayerGetInfo = async (req, res) => {
             message: `Lấy thông tin nick thành công`,
         });
     } catch (error) {
-        console.log('error :', error);
         res.status(500).json({ error: 'Lỗi hệ thống vui lòng thử lại sau' });
     }
 };

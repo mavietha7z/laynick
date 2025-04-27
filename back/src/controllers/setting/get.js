@@ -29,9 +29,9 @@ const controlGetSettings = async (req, res) => {
         } catch (error) {
             setting = {
                 apikey_login: {
-                    api_key: apikey_login,
+                    apikey: apikey_login,
                     status: false,
-                    use: '',
+                    used: '',
                     expired_at: '',
                 },
                 ...other,

@@ -13,9 +13,9 @@ const controlUpdateSetting = async (req, res) => {
         }
 
         if (type === 'config') {
-            setting.apikey_login = apikey_login;
             setting.notify = notify;
             setting.banner_url = banner_url;
+            setting.apikey_login = apikey_login;
         } else {
             setting.charging_rank = charging_rank;
         }

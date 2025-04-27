@@ -11,7 +11,6 @@ const controlChargingCard = async (req, res) => {
         const { _id: partner, partner_id, partner_key, partner_url } = req.partner;
 
         const result = await postCard(telco, code, serial, amount, partner_id, partner_key, partner_url);
-        console.log('result: ', result);
 
         if (!result || result.status === 102) {
             return res.status(400).json({
@@ -69,7 +68,6 @@ const controlChargingCard = async (req, res) => {
             });
         }
     } catch (error) {
-        console.log('error: ', error);
         res.status(500).json({ error: 'Lỗi hệ thống vui lòng thử lại sau' });
     }
 };

@@ -2,7 +2,7 @@ export const infoUsers = [
     {
         full_name: 'administrator',
         username: 'administrator',
-        password: '12345678@',
+        password: 'Administrator123@',
         admin: true,
     },
 ];

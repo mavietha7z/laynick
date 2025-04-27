@@ -12,7 +12,6 @@ const controlGetHistoryByProducts = (req, res) => {
             data: userList,
         });
     } catch (error) {
-        console.log('error: ', error);
         res.status(500).json({ error: 'Lỗi hệ thống vui lòng thử lại sau' });
     }
 };

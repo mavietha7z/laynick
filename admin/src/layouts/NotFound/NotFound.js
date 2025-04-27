@@ -31,7 +31,12 @@ function NotFound() {
                     </Link>
                 </p>
             </div>
-            <div className="copyright">© 2010 - 2023 All rights reserved</div>
+            <div className="copyright">
+                <strong>
+                    <span>Copyright ©</span>
+                </strong>
+                <a href="http://thegioicode.com">Thegioicode.com</a>
+            </div>
         </div>
     );
 }

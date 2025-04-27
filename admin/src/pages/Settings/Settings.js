@@ -28,7 +28,7 @@ function Settings() {
     const [bannerUrl, setBannerUrl] = useState('');
     const [notifyHtml, setNotifyHtml] = useState('');
     const [notifyText, setNotifyText] = useState('');
-    const [apikeyLogin, setApikeyLogin] = useState({ api_key: '', status: false, use: '', expired_at: '' });
+    const [apikeyLogin, setApikeyLogin] = useState({ apikey: '', status: false, used: '', expired_at: '' });
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -94,7 +94,7 @@ function Settings() {
         let data = null;
         if (type === 'config') {
             data = {
-                apikey_login: apikeyLogin.api_key,
+                apikey_login: apikeyLogin.apikey,
                 notify: {
                     html: notifyHtml,
                     text: notifyText,
@@ -204,7 +204,7 @@ function Settings() {
                                                                     type="text"
                                                                     className="form-control"
                                                                     placeholder="Liên hệ https://t.me/x9cmx để lấy apikey"
-                                                                    value={apikeyLogin.api_key}
+                                                                    value={apikeyLogin.apikey}
                                                                     onChange={handleChangeApikey}
                                                                 />
                                                             </td>
@@ -224,7 +224,7 @@ function Settings() {
                                                                 <input
                                                                     type="text"
                                                                     className="form-control"
-                                                                    value={apikeyLogin.use}
+                                                                    value={apikeyLogin.used}
                                                                     disabled
                                                                 />
                                                             </td>

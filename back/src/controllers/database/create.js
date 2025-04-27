@@ -77,7 +77,7 @@ const controlAuthCreateDatabase = async () => {
             }).save();
         }
     } catch (error) {
-        console.log('error: ', error);
+        console.error('error: ', error);
     }
 };
 
