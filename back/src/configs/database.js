@@ -1,7 +1,7 @@
 export const infoUsers = [
     {
-        full_name: 'ADMINISTRATOR',
-        username: 'admin',
+        full_name: 'administrator',
+        username: 'administrator',
         password: '12345678@',
         admin: true,
     },
@@ -94,3 +94,34 @@ export const infoPartners = [
         status: true,
     },
 ];
+
+export const infoSetting = {
+    notify: {
+        text: 'Hệ thống lấy lại nick game Free Fire bằng ID nhanh chóng uy tín\n\n► Cam kết thành công 100%, không được sẽ đền gấp đôi\n\n► Đền nick và tặng ngay 20 triệu tiền mặt nếu acc có vấn đề khi đang chơi\n\n=> Được tin dùng bởi các shop nick lớn và các YTB nổi tiếng',
+        html: '<p>Hệ thống lấy lại nick game Free Fire bằng ID nhanh chóng uy tín</p>\n<p>► Cam kết thành công 100%, không được sẽ đền gấp đôi</p>\n<p>► Đền nick và tặng ngay 20 triệu tiền mặt nếu acc có vấn đề khi đang chơi</p>\n<p>=&gt; Được tin dùng bởi các shop nick lớn và các YTB nổi tiếng</p>\n',
+    },
+    apikey_login: 'SV-a2d696d3-3a13-41ff-b5dc-7ca41bc09ba9',
+    banner_url: '',
+    charging_rank: [
+        {
+            nickname: 'bacgau',
+            amount: 362275,
+        },
+        {
+            nickname: 'c4gaming',
+            amount: 176204,
+        },
+        {
+            nickname: 'asmobie',
+            amount: 146821,
+        },
+        {
+            nickname: 'quynhta',
+            amount: 139482,
+        },
+        {
+            nickname: 'gaobac',
+            amount: 98204,
+        },
+    ],
+};

@@ -25,6 +25,11 @@ const controlCreateProduct = async (req, res) => {
             });
         }
 
+        const isProduct = await Product.findOne({ title });
+        if (isProduct) {
+            return res.status(400).json({ error: 'Tên sản phẩm đã tồn tại' });
+        }
+
         await new Product(req.body).save();
 
         res.status(200).json({

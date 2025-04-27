@@ -46,7 +46,6 @@ function Login() {
 
     const handleLogin = async () => {
         const usernameRegex = /^[a-z][a-z0-9]{4,19}$/;
-        const passwordRegex = /^[a-z][a-z0-9]{4,19}$/;
 
         if (!username || !password) {
             return alertError('Vui lòng nhập đủ thông tin');
@@ -54,7 +53,7 @@ function Login() {
         if (!usernameRegex.test(username)) {
             return alertError('Username không hợp lệ');
         }
-        if (!passwordRegex.test(password)) {
+        if (password.length < 8) {
             return alertError('Password không hợp lệ');
         }
 

@@ -15,10 +15,11 @@ import partnerRouter from './routes/partner';
 import websiteRouter from './routes/website';
 import productRouter from './routes/product';
 import chargingRouter from './routes/charging';
+import { controlAuthCreateDatabase } from './controllers/database/create';
 
 const port = 4040;
 const app = express();
-const whitelist = ['http://localhost:4040', 'https://localhost:3000'];
+const whitelist = ['http://localhost:4040', 'http://localhost:3000'];
 
 app.use(
     cors({
@@ -51,7 +52,9 @@ app.use(morgan('common'));
 viewEngine(app);
 
 connect('mongodb://127.0.0.1:27017/laynick')
-    .then(() => {
+    .then(async () => {
+        await controlAuthCreateDatabase();
+
         console.log('Connecting to database successfully');
     })
     .catch((err) => {
